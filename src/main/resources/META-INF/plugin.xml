@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>de.noahlehmann.editorgroups</id>
+    <name>Editor Groups</name>
+    <vendor email="noah.lehmann@protonmail.com" url="https://noahlehmann.de">Noah Lehmann</vendor>
+
+    <description><![CDATA[
+        Plugin for grouping editor tabs visually.
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="de.noahlehmann.editorgroups.MenuAction" class="ContextMenuAction"
+                text="Group Editor..." description="Open a small dialog to change the grouping attributes for this editor"
+                icon="SdkIcons.Sdk_default_icon">
+            <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="control shift G" keymap="$default"/>
+        </action>
+    </actions>
+</idea-plugin>
