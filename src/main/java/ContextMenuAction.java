@@ -1,7 +1,7 @@
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import icons.gui.EditorGroupingDialog;
+import gui.EditorGroupingDialog;
 import org.jetbrains.annotations.NotNull;
 
 public class ContextMenuAction extends AnAction {
